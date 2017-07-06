@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+     	.div1 div{
+     		display: inline-block;
+     	}
+     	header {
+     		text-align:center;
+     		background-color: red;
+     		color:white; 
+     		font-style:italic;
+     	}
+     	li {
+     		list-style-type: none;
+     	}
+
+	</style>
+	</head>
+	<body>
+	    <header>
+	    	<h1 style="margin:5px;">ZOMATO ORDERING</h1>
+	    </header>
+	    <div class="div1">
+	    	<div class="div11">
+			    <img src="http://www.dominos.co.in/theme2/front/images/home/EVD199Brand.jpg" width="326px" height="250px">
+			    <ul class="ul1">
+		    		<li><input type="checkbox" id=cb11>FARM HOUSE</li>
+		    		<li><input type="checkbox" id=cb12>PEPPY-PANEER</li>
+		    		<li><input type="checkbox" id=cb13>MEXICAN-GREEN-WAVE</li>
+		    		<li><input type="checkbox" id=cb14>VEG-EXTRAVAGANZA</li>
+		    		<li><input type="checkbox" id=cb15>PANEER-N-ONION</li>
+		    		<li><input type="checkbox" id=cb16>CHEESE-N-CORN</li>
+				</ul>
+			</div>
+			<div class="div12">
+			    <img src="https://image.slidesharecdn.com/pizzass-140113013318-phpapp02/95/comparision-of-dominos-and-pizza-hut-services-8-638.jpg?cb=1389576854" width="326px" height="250px">
+			    <ul class="ul2">
+		    		<li><input type="checkbox" id=cb21>PANEER VEGORAMA</li>
+		    		<li><input type="checkbox" id=cb22>TANDOORI PANEER</li>
+		    		<li><input type="checkbox" id=cb23>CHICKEN SUPREME</li>
+		    		<li><input type="checkbox" id=cb24>EXOTICA</li>
+		    		<li><input type="checkbox" id=cb25>KEEMA MASALA</li>
+		    		<li><input type="checkbox" id=cb26>CHEESE BURST</li>
+		    	</ul>
+		    </div>
+		    <div class="div13">
+			    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/16-03-02-Hot-Wings-KFC-Berlin-N3S_3711.jpg/220px-16-03-02-Hot-Wings-KFC-Berlin-N3S_3711.jpg" width="326px" height="250px">
+			    <ul class="ul3">
+		    		<li><input type="checkbox" id=cb31>CHICKEN SNACKER</li>
+		    		<li><input type="checkbox" id=cb32>POTATO KRISPER</li>
+		    		<li><input type="checkbox" id=cb33>KOLD KOFFEE</li>
+		    		<li><input type="checkbox" id=cb34>BROWNIE BLAST</li>
+		    		<li><input type="checkbox" id=cb35>VEG RICE BOWL</li>
+		    		<li><input type="checkbox" id=cb36>FIERY GRILLED</li>
+				</ul>
+			</div>
+			<div class="div14">
+			    <img src="http://greenarea.me/wp-content/uploads/2016/01/macdonald.jpg" width="326px" height="250px">
+			    <ul class="ul4">
+		    		<li><input type="checkbox" id=cb41>BIG Mac</li>
+		    		<li><input type="checkbox" id=cb42>Mc CHICKEN</li>
+		    		<li><input type="checkbox" id=cb43>SIDE SALAD</li>
+		    		<li><input type="checkbox" id=cb44>WORLD FAMOUS FRIES</li>
+		    		<li><input type="checkbox" id=cb45>VANILLA CONE</li>
+		    		<li><input type="checkbox" id=cb46>McCAFE LATTE</li>
+				</ul>
+		    </div>
+	    </div>
+	    <button type="button">DONE</button>
+        <script src="F:\html_css_javascript\acadnotes\js\jquery-2.2.0.js"></script>
+		<script>
+			$('.ul1').hide();
+		    $('.ul2').hide();
+		    $('.ul3').hide();
+		    $('.ul4').hide();
+			$('.div11 img').on('click',function(){
+              $('.ul1').toggle();
+              $('.div12').toggle();
+              $('.div13').toggle();
+              $('.div14').toggle();
+             });
+			$('.div12 img').on('click',function(){
+              $('.ul2').toggle();
+              $('.div11').toggle();
+              $('.div13').toggle();
+              $('.div14').toggle();
+			});
+			$('.div13 img').on('click',function(){
+              $('.ul3').toggle();
+              $('.div11').toggle();
+              $('.div12').toggle();
+              $('.div14').toggle();
+			});
+			$('.div14 img').on('click',function(){
+              $('.ul4').toggle();
+              $('.div11').toggle();
+              $('.div12').toggle();
+              $('.div13').toggle();
+			});	
+			$('button').on('click',function(){
+           		if ($('input:checkbox:checked').length>0){
+                		console.log("Thnak you for Ordering.Your order has been registered.");
+           			 }
+            	else {
+                		alert("You have not selected any food item");
+           			 }
+			});
+		</script>
+	</body>
+</html>
